@@ -1,0 +1,8 @@
+int A[2][4];
+
+in memory this is stores in a linear structure!
+like here 2x4 = 8
+ _  _  _  _  _  _  _  _
+|_||_||_||_||_||_||_||_|
+
+but compiler allow to declare it in rows and columns method

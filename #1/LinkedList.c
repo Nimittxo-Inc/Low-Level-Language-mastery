@@ -1,44 +1,43 @@
-#include <stdio.h>
+#include "dsa.h"
 
-struct Node {
+struct node{
     int data;
-    struct Node* next;
+    struct node *link;
 };
 
-void addNode(struct Node** head, int data) {
-    struct Node* newNode = (struct Node*)malloc(sizeof(struct Node));
-    newNode->data = data;
-    newNode->next = *head;
-    *head = newNode;
-}
+void print_data(struct node *head){
+  if(head == NULL){
+    printf("List is empty.\n");
+  }
+  struct node *ptr = NULL;
+  ptr = head;
+  while(ptr != NULL){
+    printf("%d\n",ptr->data);
+    ptr = ptr->link;
+}}
 
-void AddtoBeginning(struct Node** head, int data) {
-    struct Node* newNode = (struct Node*)malloc(sizeof(struct Node));
-    newNode->data = data;
-    newNode->next = *head;
-    *head = newNode;
-}
+int main()
+{   struct node *head = NULL;
+    head = (struct node *)malloc(sizeof(struct node));
+    head->data = 10;
+    head->link = NULL;
+    
+    struct node *current = NULL;
+    current = (struct node *)malloc(sizeof(struct node));
+    current->data = 20;
+    current->link = NULL;
+    head->link = current; //this line is to connect both nodes head and current
 
-void AddtoEnd(struct Node** head, int data) {
-    struct Node* newNode = (struct Node*)malloc(sizeof(struct Node));
-    struct Node* last = *head;
-    newNode->data = data;
-    newNode->next = NULL;
-    if (*head == NULL) {
-        *head = newNode;
-        return;
-    }
-    while (last->next != NULL) {
-        last = last->next;
-    }
-    last->next = newNode;
-    return;
-}
+    current = (struct node *)malloc(sizeof(struct node));
+    current->data = 30;
+    current->link = NULL;
+    head->link->link = current; 
 
-int main() {
-    struct Node* head = NULL;
-    addNode(&head, 1);
-    AddtoBeginning(&head, 2);
-    AddtoEnd(&head, 3);
-    return 0;
+    current = (struct node *)malloc(sizeof(struct node));
+    current->data = 40;
+    current->link = NULL;
+    head->link->link->link = current;    
+
+    print_data(head);
+  return 0;
 }

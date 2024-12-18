@@ -1,0 +1,21 @@
+Basic Array Questions
+Sum of Elements: Write a program that takes an array as input and returns the sum of all elements in the array.
+
+Largest and Smallest Elements: Given an array, find the largest and smallest elements in the array.
+
+Reverse the Array: Write a function that reverses the elements of an array in-place (without using an additional array).
+
+Second Largest Element: Find the second largest element in the array without sorting it.
+
+Count of Even and Odd Numbers: Given an array, count how many even and odd numbers it contains.
+
+Intermediate Array Questions
+Left Rotate Array by One: Rotate the elements of the array to the left by one position. For example, if the array is [1, 2, 3, 4, 5], the rotated array should be [2, 3, 4, 5, 1].
+
+Find Duplicates: Write a program to identify if there are any duplicate elements in the array. (Assume values are within a specific range if needed.)
+
+Array Insertion: Insert an element at a specific position in the array. Ensure the program shifts other elements as needed.
+
+Merge Two Sorted Arrays: Given two sorted arrays, merge them into a single sorted array without using any built-in sorting function.
+
+Move Zeros to End: Given an array, move all zeros to the end while maintaining the relative order of non-zero elements.

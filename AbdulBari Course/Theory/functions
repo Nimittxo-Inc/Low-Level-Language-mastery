@@ -1,0 +1,17 @@
+functions are the piece of code that perofrms a specific task 
+
+difference b/w structre and function
+
+structure is a group of related data memebers
+while
+function is a group of related set of instructions
+
+Arrays can be passed via address, arrays cannot be passed via refrence
+Arrays as Pointers:
+
+When you pass an array to a function, what actually gets passed is the address of the first element of the array. 
+This means the function receives a pointer to the array, not the entire array itself.
+For example, if you have an array int arr[5]; 
+and 
+pass it to a function func(arr);, 
+it’s equivalent to passing func(&arr[0]);.

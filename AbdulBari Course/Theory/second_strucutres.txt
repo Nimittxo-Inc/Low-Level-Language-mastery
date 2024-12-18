@@ -1,0 +1,18 @@
+Structre takes memory according to the data type defined inside It.
+
+example: 
+struct Rectangle
+{
+    int length; // 2 bytes
+    int breadth; // 2 bytes
+                              ----- Total 4 bytes
+};
+
+// How does It look inside the main fucntion:
+
+int main(){
+    struct Rectangle r;
+    struct Rectangle r= {10, 5};  
+}               
+
+so this r is created inside the main frame of Stack Memory

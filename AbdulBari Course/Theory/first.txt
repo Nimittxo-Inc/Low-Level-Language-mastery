@@ -1,0 +1,8 @@
+when We Assign an array 
+
+suppose int A[] = {1, 2, 3, 4, 5};
+this goes from the code section to the Stack Memory 
+inside a main function.
+Integer takes 2bytes.
+But many modern compilers assign 4 bytes to the Integer.
+

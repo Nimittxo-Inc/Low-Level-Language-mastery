@@ -1,0 +1,24 @@
+for example we create: 
+
+void main() 
+{
+    int A[5];  // Created in Stack !
+
+
+Now to create a dynamic array we need to create It in
+Heap!
+
+Now to access Heap we need a Pointer
+
+[ REMEMBER ] !!
+
+The pointer to the array in heap is same as the name
+of Stack, i.e. we can use pointer to access stack
+
+int *p = (int*) malloc(6*sizeof(int));
+p[0] = 1;
+p[1] = 2;
+p[2] = 3;
+p[3] = 4;
+			
+	

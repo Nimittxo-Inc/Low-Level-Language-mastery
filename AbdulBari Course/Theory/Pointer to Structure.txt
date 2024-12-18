@@ -1,0 +1,62 @@
+that every pointer no matter what Variable or data type It points to has the same amount of memory,
+for example if a sturcture is of 8bytes and I assign a pointer pointing towards the structre It still takes 2 or 4bytes depeding upon the compiler
+
+
+We use a -> operator to access the pointer to the strucutre
+
+since we used *p.length = 20; in generic cases
+but here the presedence value of "." Operator is higher so 
+It will not work
+
+the . operator has a higher precedence than *. 
+So, if p is a pointer to a structure, 
+writing *p.length will be interpreted as trying to 
+access the length field of p itself, 
+not the structure it points to.
+
+This results in a syntax error because p isn’t 
+the actual structure but a pointer to it.
+
+To correctly access length in the structure pointed to by p, 
+you can write (*p).length = 20;. Here, (*p) dereferences p, 
+giving access to the structure itself, 
+so you can then use the . operator to access length.
+
+so we thought of using (*p).length=20;
+but here we have to write so much syntax so C-lang provided
+-> operator
+
+-> Operator Simplification:
+
+To avoid the extra syntax of (*p).length,
+ C provides the -> operator, 
+ which is shorthand for dereferencing a pointer to access a structure member.
+Thus, p->length = 20; 
+achieves the same result as (*p).length = 20;, 
+but is much cleaner and easier to read.
+The -> operator is not only more convenient but also 
+improves code readability, 
+especially when working with structures in complex codebases.
+
+
+malloc returns a void pointer. that means a generic pointer
+
+that is why we need to type cast it to make It a Sturct pointer
+i.e.
+
+pointer = (struct Rectangle*) malloc(sizeof(struct Rectangle));
+So Now the strucutre will be created in the Heap and the pointer will be pointing to It Now
+
+malloc and void Pointers:
+
+malloc returns a void*, 
+meaning a generic pointer that can point to any data type. 
+This is because malloc doesn’t know 
+what type of data you’ll be storing—it just allocates a 
+block of memory in the heap of the specified size.
+
+By casting malloc to (struct Rectangle*), 
+you’re telling the compiler that the void* pointer 
+from malloc should be treated as a pointer 
+to a struct Rectangle.
+
